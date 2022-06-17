@@ -14,11 +14,12 @@ const userSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true,
-        // minLength: 10,
-        // maxLength: 100,
-        // match: '/^.{0,20}$/'
-        // validate: { min: 1, max: 10 },
-    }
+        minLength: 8,
+    },
+    isVerified: {
+        type:Boolean,
+        default: false,
+    },
 });
 
 const User = mongoose.model("User", userSchema);
