@@ -18,13 +18,13 @@ userRouter.get("/allusers", async (req, res) => {
     // res.send(userList);
 });
 
-
 userRouter.get('/:id', async (req, res) => {
     console.log(req.params);
     // const user = await User.findOne({where: { id: req.params.id }});
     const user = await User.find({_id: { $eq: req.params.id}});
     res.status(200).json({message: user});
 });
+
 userRouter.get('/username/username', async (req, res) => {
     console.log(req.params); // has the username requested in url in this object with key being username
     // const user = await User.findOne({where: {username: req.params.username}});
