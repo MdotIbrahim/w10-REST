@@ -3,5 +3,5 @@
 ## guide to run
 ```bash
 npm init -y
-npm i express mongoose dotenv bcryptjs
+npm i express mongoose dotenv bcryptjs jsonwebtoken
 ```
