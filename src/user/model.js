@@ -15,6 +15,9 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
         minLength: 8,
+        // maxLength: 100,
+        // match: '/^.{0,20}$/'
+        // validate: { min: 1, max: 10 },
     },
     isVerified: {
         type:Boolean,
